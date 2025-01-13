@@ -1,0 +1,26 @@
+# Environment files
+.env
+
+# Node modules
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Log files
+*.log
+logs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Version control
+.git
+.gitignore
+
+# Editor/IDE configurations
+.vscode/
+.idea/
+
