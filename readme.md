@@ -103,9 +103,9 @@ This will:
 
 Once everything is up and running, you can access your application as follows:
 
-- **Frontend (React + Vite)**: `http://localhost:5173`
-- **Backend (GraphQL API)**: `http://localhost:4000/graphql`
-- **Adminer (for managing PostgreSQL)**: `http://localhost:8080`
+- **Frontend (React + Vite)**: `http://localhost:7001`
+- **Backend (GraphQL API)**: `http://localhost:7001/api`
+- **Adminer (for managing PostgreSQL)**: `http://localhost:7001/vizualizer`
   - Use `postgres` as the database username, the value of `DB_PASSWORD` for the password, and `templateDB` as the database name.
 
 ### 7. NGINX Configuration
