@@ -89,7 +89,7 @@ You can build and start all services using Docker Compose.
 In the root directory of the project (where the `docker-compose.yml` file is located), run the following command:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 This will:
