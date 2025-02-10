@@ -58,8 +58,7 @@ Create `.env` files for both the frontend and backend if not already present.
   This file contains environment variables for the frontend service, including the gateway URL.
 
   ```env
-  VITE_GATEWAY_URL=http://localhost:4000
-  VITE_GATEWAY_PORT=4000
+  VITE_GATEWAY_PORT=7001
   ```
 
 ### 3. Install Dependencies
