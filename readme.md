@@ -52,6 +52,7 @@ Create `.env` files for both the frontend and backend if not already present.
   DB_PASSWORD=your-password
   DB_SCHEMA=templateDB
   DB_PORT=5432
+  BACKEND_PORT=4000
   ```
 
 - **Frontend .env file (`frontend/.env`)**:

@@ -1,18 +1,18 @@
 services:
   backend:
+    container_name: backend
     build: ./backend
-    ports:
-      - 4000:4000
     command: npm run start
     volumes:
       - ./backend/src/:/app/src
     environment:
       APP_SECRET: ${APP_SECRET}
       DB_HOST: ${DB_HOST}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_PORT: ${DB_PORT}
-      DB_SCHEMA: ${DB_SCHEMA}
       DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_SCHEMA: ${DB_SCHEMA}
+      DB_PORT: ${DB_PORT}
+      BACKEND_PORT: ${BACKEND_PORT}
 
   frontend:
     container_name: frontend
@@ -28,11 +28,10 @@ services:
     volumes:
       - ./persist/data/:/var/lib/postgresql/data
     environment:
-      DB_HOST: ${DB_HOST}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_PORT: ${DB_PORT}
-      DB_SCHEMA: ${DB_SCHEMA}
-      DB_USER: ${DB_USER}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_SCHEMA}
+      POSTGRES_PORT: ${DB_PORT}
 
   vizualizer:
     container_name: vizualizer
@@ -43,5 +42,7 @@ services:
     image: nginx
     ports:
       - ${VITE_GATEWAY_PORT}:80
+    environment:
+      BACKEND_PORT: ${BACKEND_PORT}
     volumes:
       - ./nginx.dev.conf:/etc/nginx/nginx.conf
