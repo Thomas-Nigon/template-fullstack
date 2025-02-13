@@ -1,3 +1,6 @@
 node_modules
 .env
+persist
 persist/
+persist/data/
+persist/global
